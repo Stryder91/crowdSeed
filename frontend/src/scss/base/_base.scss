@@ -1,0 +1,84 @@
+@font-face {
+  // font-family: 'Rajdhani';
+  // src: url('../../assets/Rajdhani/Rajdhani-Regular.ttf');
+}
+
+:root{
+  //Font styles descriptions
+  --font-family: 'Rajdhani', sans-serif;
+  --font-style: normal;
+
+  //Colors
+  --accent-color: #fefefe;
+  --red:#EF1D27;
+  --blue:#2050F1;
+  --yellow:#FFDA2D;
+  --gray:#A7A7A7;
+  --primary: #01E401;
+  --secondary: #bb00ff;
+  --white: #fefefe;
+  --black: #121212;
+  --grey: #1A2127;
+
+  //Colors gradient
+  --yellow-gradient: linear-gradient(180deg, #FEE159 0%, #FFD200 100%);
+  --red-gradient: linear-gradient(180deg, #E84142 0%, #7E0006 100%);
+  --gray-gradient: linear-gradient(180deg, #C5C5C5 0%, #8A8A8A 100%);
+  --blue-gradient: linear-gradient(180deg, #245AFC 0%, #1A44E6 100%);
+  --gold-gradient: linear-gradient(180deg, #FFB552 0%, #FFF743 52.08%, #FFB552 100%);
+
+  // Radius
+  --radius-input: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input, label, h1, h2, h3, h4, h5, h6, select, option, button {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+input {
+  border: #111111 2px solid;
+  border-radius: 10px;
+}
+
+@media only screen and (min-device-width: 280px) and (max-device-width: 1080px) {
+  .app-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: #111111;
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+}
+
+button{
+  background-color: var(--secondary);
+  color: white;
+  margin: 5px;
+  padding: 4px 16px;
+  border-radius:var(--radius-input) ;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // font-family: 'csgo';
+  font-weight: bold;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 32px; }
+h3 { font-size: 26px; }
