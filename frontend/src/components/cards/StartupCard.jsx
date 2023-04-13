@@ -1,4 +1,5 @@
 import React from "react";
+import { percentRaised } from "../../utils/helpers/parsing";
 
 export const StartupCard = ({ name, description, amountToRaise, amountRaised }) => {
   return (
@@ -26,9 +27,9 @@ export const StartupCard = ({ name, description, amountToRaise, amountRaised }) 
         <div className="bg-gray-100 rounded-full">
           <div
             className="bg-blue-500 rounded-full text-xs leading-none py-1 text-center text-white"
-            style={{ width: "50%" }}
+            style={{ width: `${percentRaised(amountToRaise, amountRaised)}` }}
           >
-            50% Funded
+            {percentRaised(amountToRaise, amountRaised)} Funded
           </div>
         </div>
         <div className="mt-4">

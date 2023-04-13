@@ -11,7 +11,6 @@ export const Startups = () => {
 
   useEffect(async () => {
     const res = await axios.get(path_getStartups);
-		console.log("res", res);
     setStartups(res.data);
   }, []);
 
@@ -22,8 +21,8 @@ export const Startups = () => {
 
 	console.log("startups", startups);
   return(
-    <div>
-      <h1>Select an startup</h1>
+    <div className="text-center">
+      <h1>Select a startup</h1>
       <div className="matches">
         <div className="w-3/4 flex m-auto"> 
 					{startups && startups.map((st, i) => {
@@ -31,6 +30,7 @@ export const Startups = () => {
 							name={st.name}
 							description={st.name}
 							amountToRaise={st.amountToRaise}
+              amountRaised={st.amountRaised}
 							key={i} 
 						/>
 					})}

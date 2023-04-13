@@ -47,7 +47,12 @@ input, label, h1, h2, h3, h4, h5, h6, select, option, button {
 }
 
 input {
-  border: #111111 2px solid;
+  border: grey 2px solid;
+  border-radius: 10px;
+}
+
+input:focus {
+  border: green 2px solid;
   border-radius: 10px;
 }
 
