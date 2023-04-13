@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose'; 
-import { HomeDocument } from '../types/interfaces';
+import { HomeDocument, HousingModel } from '../types/interfaces';
 
 let homeSchema: Schema<HomeDocument> = new mongoose.Schema({
   address: {
@@ -29,6 +29,6 @@ let homeSchema: Schema<HomeDocument> = new mongoose.Schema({
   },
 })
 
-const Home = mongoose.model<HomeDocument>('home', homeSchema);
+const Home = mongoose.model<HomeDocument, HousingModel>('home', homeSchema);
 
 export default Home;

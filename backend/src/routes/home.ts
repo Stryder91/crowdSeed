@@ -34,6 +34,6 @@ router.get('/', getHomes);
 router.patch('/:id', updateHome);
 
 /*DELETE*/
-router.get('/delete/:id', deleteHome);
+router.delete('/:id', deleteHome);
 
 export { router as homeRouter };

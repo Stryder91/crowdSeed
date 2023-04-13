@@ -4,7 +4,7 @@ import { path_deleteHome } from "../../data/routes";
 export const DeleteCta = ({ id }) => {
 
 	const _handleDelete = async () => {
-		const res = await axios.get(path_deleteHome(id))
+		const res = await axios.delete(path_deleteHome(id))
 	}
 
 	return <div className="mt-4" onClick={_handleDelete}>

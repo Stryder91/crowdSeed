@@ -22,7 +22,7 @@ export default function App() {
       <Sidebar > 
         <main>
           <Routes >       
-            <Route path="/signup" element={<CreateHomePage />} />
+            <Route path="/create" element={<CreateHomePage />} />
             <Route path="/homes" element={<Homes />} />
             <Route path="/" element={<Landing />} />
           </Routes>

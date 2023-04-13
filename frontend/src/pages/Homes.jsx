@@ -25,14 +25,9 @@ export const Homes = () => {
       <h1>Select a home</h1>
       <div className="matches">
         <div className="flex m-auto"> 
-					{homes && homes.map((st, i) => {
-						return <HomeCard 
-              id={st._id}
-							name={st.name}
-							description={st.name}
-							amountToRaise={st.amountToRaise}
-              amountRaised={st.amountRaised}
-							key={i} 
+					{homes && homes.map((h, i) => {
+						return <HomeCard key={i}
+              housing={h}
 						/>
 					})}
 				 </div>

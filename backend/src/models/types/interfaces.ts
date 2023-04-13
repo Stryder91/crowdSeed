@@ -1,7 +1,9 @@
-import { Document } from 'mongoose';
+import { Document, Model } from 'mongoose';
 
 export interface IHome  {
+  name: string;
   address?: string;
+  description?: string;
   city?: string;
   state?: string;
   zipcode?: string;
@@ -12,4 +14,5 @@ export interface IHome  {
 }
 
 export interface HomeDocument extends IHome, Document {}
+export interface HousingModel extends Model<HomeDocument> {}
 

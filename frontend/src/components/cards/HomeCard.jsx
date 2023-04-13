@@ -1,49 +1,30 @@
 import React from "react";
-import { percentRaised } from "../../utils/helpers/parsing";
 import { DeleteCta } from "./Delete";
 
-export const HomeCard = ({ id, name, description, amountToRaise, amountRaised }) => {
+export const HomeCard = ({ housing }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden m-5">
+    <div className="m-4 w-2/4 bg-white rounded-lg overflow-hidden shadow-lg">
       <img
-        className="h-48 w-full object-cover"
-        src="https://picsum.photos/800/600"
-        alt="Funds collection"
+        className="w-full h-48 object-cover"
+        src="https://source.unsplash.com/featured/?home"
+        alt="Housing"
       />
-      <div className="p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
-          { name }
-        </h2>
-        <p className="text-gray-700 text-base mb-4">
-         { description }
-        </p>
-        <div className="flex items-center mb-4">
-          <span className="text-gray-600 font-bold mr-2">Goal:</span>
-          <span className="text-gray-900">${ amountToRaise },000</span>
+      <div className="p-4">
+        <h2 className="font-bold text-xl mb-2">{housing.address}</h2>
+        <div className="text-gray-700 mb-4">
+          <p>{housing.city}, {housing.state} {housing.zipcode}</p>
+          <p>Bedrooms: {housing.bedrooms}</p>
+          <p>Bathrooms: {housing.bathrooms}</p>
+          <p>Square Feet: {housing.squareFeet}</p>
+          <p>Price: ${housing.price}</p>
         </div>
-        <div className="flex items-center mb-4">
-          <span className="text-gray-600 font-bold mr-2">Amount Raised:</span>
-          <span className="text-gray-900">${ amountRaised },000</span>
-        </div>
-        <div className="bg-gray-100 rounded-full">
-          <div
-            className="bg-blue-500 rounded-full text-xs leading-none py-1 text-center text-white"
-            style={{ width: `${percentRaised(amountToRaise, amountRaised)}` }}
-          >
-            {percentRaised(amountToRaise, amountRaised)} Funded
-          </div>
-        </div>
-        <div className="mt-4">
-          <a
-            href="#"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Discover
-          </a>
-        </div>
-
-        <DeleteCta id={id}/>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Contact Us
+        </button>
+        <DeleteCta id={housing._id}/>
       </div>
     </div>
   );
 };
+
+

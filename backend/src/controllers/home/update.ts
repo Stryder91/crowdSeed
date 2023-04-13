@@ -8,6 +8,7 @@ import { IHome } from "../../models/types/interfaces";
 export const updateHome = async (req: any, res: any) => {
   const { id } = req.params;
   const { 
+    name,
     address, 
     city,
     state,
@@ -22,6 +23,7 @@ export const updateHome = async (req: any, res: any) => {
     return res.status(404).send(`No Home with id: ${id}`);
 
   const updatedHome: IHome = {
+    name,
     address, 
     city,
     state,

@@ -4,6 +4,7 @@ import { IHome } from "../../models/types/interfaces";
 
 export const createHome = async (req: any, res: any) => {
   const { 
+    name,
     address, 
     city,
     state,
@@ -14,6 +15,8 @@ export const createHome = async (req: any, res: any) => {
     price
   } = req.body;
   
+  console.log(req.body);
+  
   const errors = validationResult(req);
 
   if (!errors.isEmpty()) {
@@ -22,6 +25,7 @@ export const createHome = async (req: any, res: any) => {
   }
 
   const homeDto : IHome = {
+    name,
     address, 
     city,
     state,
@@ -29,7 +33,7 @@ export const createHome = async (req: any, res: any) => {
     bedrooms,
     bathrooms, 
     squareFeet,
-    price
+    price: parseInt(price)
   }
 
   const newHome = new Home(homeDto);
