@@ -1,8 +1,8 @@
 import React from "react";
 
-export const SeedCard = () => {
+export const StartupCard = ({ name, description, amountToRaise, amountRaised }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden m-5">
       <img
         className="h-48 w-full object-cover"
         src="https://picsum.photos/800/600"
@@ -10,19 +10,18 @@ export const SeedCard = () => {
       />
       <div className="p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">
-          SeedCard Funds Collection
+          { name }
         </h2>
         <p className="text-gray-700 text-base mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          gravida interdum nisi vitae tempor.
+         { description }
         </p>
         <div className="flex items-center mb-4">
           <span className="text-gray-600 font-bold mr-2">Goal:</span>
-          <span className="text-gray-900">$500,000</span>
+          <span className="text-gray-900">${ amountToRaise },000</span>
         </div>
         <div className="flex items-center mb-4">
           <span className="text-gray-600 font-bold mr-2">Amount Raised:</span>
-          <span className="text-gray-900">$250,000</span>
+          <span className="text-gray-900">${ amountRaised },000</span>
         </div>
         <div className="bg-gray-100 rounded-full">
           <div
@@ -37,7 +36,7 @@ export const SeedCard = () => {
             href="#"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
-            Donate Now
+            Discover
           </a>
         </div>
       </div>

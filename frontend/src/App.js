@@ -10,7 +10,8 @@ import "./scss/index.scss";
 import './utils/I18n';
 import { Context } from './utils/Context';
 import { Header } from './components/header/Header';
-import { SeedCard } from './components/Card';
+import { SeedCard } from './components/cards/SeedCard';
+import { Startups } from './pages/Startups';
 
 export default function App() {
 
@@ -19,6 +20,7 @@ export default function App() {
       <Header />
       <main>
         <Routes >       
+          <Route path="/startups" element={<Startups />} />
           <Route path="/" element={<Landing />} />
         </Routes>
       </main>

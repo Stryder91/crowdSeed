@@ -1,5 +1,5 @@
-import Startup from "../../models/startup";
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
+import Startup from "../../models/mongoose/startup";
 
 export const deleteStartup = async (req: any, res: any) => {
   const { id } = req.params;

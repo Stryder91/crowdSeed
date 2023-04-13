@@ -13,6 +13,10 @@ export const Header = () => {
 
   const _routes = [
     {
+      name: "Start-Ups",
+      path: "/startups"
+    },
+    {
       name: "Créer un compte",
       path: "signup",
     },

@@ -6,6 +6,11 @@ let startupSchema = new mongoose.Schema({
     required: true,
     index: true
   },
+  description : {
+    type: String,
+    required: true,
+    index: true
+  },
   numberOfEmployes: {
     type: Number,
     required: true,

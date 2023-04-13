@@ -10,7 +10,7 @@ export const path_getMatchesById =  `${BASE_URL_LOCAL_FORBACKEND}/matches`;
 /**
  * List all endpoints against the back-end for EVENTS
  */
-export const path_getEvents =  `${BASE_URL_LOCAL_FORBACKEND}/events`;
+export const path_getStartups =  `${BASE_URL_LOCAL_FORBACKEND}/`;
 
 
 /** Others path */

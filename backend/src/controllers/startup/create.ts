@@ -1,5 +1,5 @@
 import { validationResult } from "express-validator";
-import Startup from "../../models/startup";
+import Startup from "../../models/mongoose/startup";
 import { IStartup } from "../../models/types/interfaces";
 
 export const createStartup = async (req: any, res: any) => {

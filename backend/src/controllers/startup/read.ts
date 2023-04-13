@@ -1,4 +1,4 @@
-import Startup from "../../models/startup";
+import Startup from "../../models/mongoose/startup";
 
 export const getStartup = async (req: any, res: any) => {
   const { id } = req.query;

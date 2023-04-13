@@ -13,8 +13,6 @@ import {
 
 import { 
     updateStartup,
-    buyStartup,
-    confirmStartup,
 } from '../controllers/startup/update';
 
 import { 
