@@ -1,5 +1,4 @@
-# Crowd Funding Project by Lionel TRAN
-
+# Project by Lionel TRAN
 
 ## SET UP
 cd front/ 

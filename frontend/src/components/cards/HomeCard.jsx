@@ -1,7 +1,8 @@
 import React from "react";
 import { percentRaised } from "../../utils/helpers/parsing";
+import { DeleteCta } from "./Delete";
 
-export const StartupCard = ({ name, description, amountToRaise, amountRaised }) => {
+export const HomeCard = ({ id, name, description, amountToRaise, amountRaised }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden m-5">
       <img
@@ -40,6 +41,8 @@ export const StartupCard = ({ name, description, amountToRaise, amountRaised }) 
             Discover
           </a>
         </div>
+
+        <DeleteCta id={id}/>
       </div>
     </div>
   );

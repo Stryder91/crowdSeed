@@ -10,21 +10,24 @@ import "./scss/index.scss";
 import './utils/I18n';
 import { Context } from './utils/Context';
 import { Header } from './components/header/Header';
-import { Startups } from './pages/Startups';
-import { CreateStartupPage } from './pages/CreateStartup';
+import { Homes } from './pages/Homes';
+import { CreateHomePage } from './pages/CreateHome';
+import { Sidebar } from './components/sidebar/SideBar';
 
 export default function App() {
 
   return (
     <div className='app'>
       <Header />
-      <main>
-        <Routes >       
-          <Route path="/signup" element={<CreateStartupPage />} />
-          <Route path="/startups" element={<Startups />} />
-          <Route path="/" element={<Landing />} />
-        </Routes>
-      </main>
+      <Sidebar > 
+        <main>
+          <Routes >       
+            <Route path="/signup" element={<CreateHomePage />} />
+            <Route path="/homes" element={<Homes />} />
+            <Route path="/" element={<Landing />} />
+          </Routes>
+        </main>
+      </Sidebar>
     </div>
   )
 }

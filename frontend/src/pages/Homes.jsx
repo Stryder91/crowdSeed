@@ -1,32 +1,33 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { path_getStartups } from "../data/routes";
-import { StartupCard } from "../components/cards/StartupCard";
+import { path_getHomes } from "../data/routes";
+import { HomeCard } from "../components/cards/HomeCard";
 
-export const Startups = () => {
+export const Homes = () => {
   const navigate = useNavigate();
-  const [startups, setStartups] = useState([]);
+  const [homes, setHomes] = useState([]);
   const { pathname, hash, key } = useLocation();
 
   useEffect(async () => {
-    const res = await axios.get(path_getStartups);
-    setStartups(res.data);
+    const res = await axios.get(path_getHomes);
+    setHomes(res.data);
   }, []);
 
-  const _navigateToStartup = (id) => {
+  const _navigateToHome = (id) => {
     navigate(`${id}`);
     // dispatch to redux
   }
 
-	console.log("startups", startups);
+	console.log("homes", homes);
   return(
     <div className="text-center">
-      <h1>Select a startup</h1>
+      <h1>Select a home</h1>
       <div className="matches">
-        <div className="w-3/4 flex m-auto"> 
-					{startups && startups.map((st, i) => {
-						return <StartupCard 
+        <div className="flex m-auto"> 
+					{homes && homes.map((st, i) => {
+						return <HomeCard 
+              id={st._id}
 							name={st.name}
 							description={st.name}
 							amountToRaise={st.amountToRaise}

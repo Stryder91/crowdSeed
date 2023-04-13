@@ -5,7 +5,7 @@ import cors from 'cors';
 import * as dotenv from 'dotenv';
 
 
-import { startupRouter } from './routes/startup';
+import { homeRouter } from './routes/home';
 
 const mongoose = require('mongoose');
 
@@ -17,7 +17,7 @@ app.use(bodyParser.json({ limit: '30mb' }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
-app.use('/', startupRouter);
+app.use('/', homeRouter);
 
 const CONNECTION_URL = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@${process.env.CLUSTER}/${process.env.DB}`;
 const PORT = process.env.PORT || 5000;
