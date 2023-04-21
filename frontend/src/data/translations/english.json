@@ -1,3 +1,9 @@
 {
-  "title": "Crowd Funding"
+  "title": "Immodagascar",
+  "catg": {
+    "housing": "Housing",
+    "create": "Sell",
+    "rent": "Rent", 
+    "profil": "My profil"
+  }
 }

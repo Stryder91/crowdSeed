@@ -27,7 +27,7 @@ let homeSchema: Schema<HomeDocument> = new mongoose.Schema({
     type: Number,
     required: true,
   },
-})
+});
 
 const Home = mongoose.model<HomeDocument, HousingModel>('home', homeSchema);
 

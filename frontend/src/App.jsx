@@ -23,22 +23,10 @@ export default function App() {
         <main>
           <Routes >       
             <Route path="/create" element={<CreateHomePage />} />
-            <Route path="/homes" element={<Homes />} />
-            <Route path="/" element={<Landing />} />
+            <Route path="/" element={<Homes />} />
           </Routes>
         </main>
       </Sidebar>
     </div>
   )
-}
-
-const Landing = () => {
-  const { t } = useTranslation();
-  const {state, dispatch} = useContext(Context);
-
-  return (
-    <div className='flex flex-wrap justify-center relative text-center'>
-      <h1 className='w-full'>{t("title")}</h1>
-    </div>
-  );
 }

@@ -28,20 +28,4 @@ nav {
       gap: 3rem;
     }
   }
-  .wallet-container {
-    display: flex;
-    button {
-      font-family: var(--font-title-family);
-
-      height: 2.6rem;
-      width: 12rem;
-
-      border: none;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 10px;
-
-      background: var(--red-gradient);
-      color: var(--accent-color);
-    }
-  }
 }

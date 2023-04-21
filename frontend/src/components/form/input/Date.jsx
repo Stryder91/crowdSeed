@@ -2,7 +2,7 @@ export const Date = () => {
 	return <div className="w-full px-3 sm:w-1/2">
 		<div className="mb-5">
 			<label
-				for="date"
+				htmlFor="date"
 				className="mb-3 block text-base font-medium text-[#07074D]"
 			>
 				Date

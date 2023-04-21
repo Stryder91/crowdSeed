@@ -9,7 +9,7 @@ const Text = ({ label, handler }) => {
 			{ label }
 		</label>
 		<input
-			onChange={handler	}
+			onChange={handler}
 			type="text"
 			name={label}
 			id={label}

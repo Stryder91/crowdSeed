@@ -3,7 +3,7 @@ import { DeleteCta } from "./Delete";
 
 export const HomeCard = ({ housing }) => {
   return (
-    <div className="m-4 w-2/4 bg-white rounded-lg overflow-hidden shadow-lg">
+    <div className="m-4 w-1/4 bg-white rounded-lg overflow-hidden shadow-lg">
       <img
         className="w-full h-48 object-cover"
         src="https://source.unsplash.com/featured/?home"

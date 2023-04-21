@@ -2,20 +2,30 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 
-
 import { homeRouter } from './routes/home';
-
-const mongoose = require('mongoose');
+// const { auth } = require('express-openid-connect');
 
 dotenv.config({ override: true, debug: true })
+
+// const config = {
+//   authRequired: false,
+//   auth0Logout: true,
+//   secret: process.env.AUTH0_CLIENT_SECRET,
+//   baseURL: process.env.BASE_URL,
+//   clientID: process.env.AUTH0_CLIENT_ID,
+//   issuerBaseURL: process.env.AUTH0_DOMAIN
+// };
+
 
 const app = express();
 
 app.use(bodyParser.json({ limit: '30mb' }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
+
 
 app.use('/', homeRouter);
 

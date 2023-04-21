@@ -3,9 +3,8 @@ import { useTranslation } from "react-i18next";
 import { DDownMobile } from "./Dropdown_Mobile";
 import { SwitchLocale } from "../others/SwitchLocale";
 import { HeaderUrls } from "./HeaderUrls";
-
-// import logo from "../public/logo.svg";
-
+import { LoginButton } from "./Login";
+import { LogoutButton } from "./Logout";
 
 export const Header = () => {
 
@@ -13,16 +12,8 @@ export const Header = () => {
 
   const _routes = [
     {
-      name: "Start-Ups",
+      name: "Homes",
       path: "/homes"
-    },
-    {
-      name: "Créer un compte",
-      path: "signup",
-    },
-    {
-      name: "Se connecter",
-      path: "signin",
     },
   ];
 
@@ -45,6 +36,8 @@ export const Header = () => {
 			{/* DESKTOP */}
 			<div className='hidden lg:flex'>
         <HeaderUrls routes={_routes}/>
+        <LoginButton />
+        <LogoutButton />
         <SwitchLocale />
 			</div>
 		</header>

@@ -1,11 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
-
-import { SearchDropDown_Category, SearchDropDown_Subcategory } from "./SearchDropdown";
-import { path_createHome } from "../../data/routes";
 import { Number } from "./input/Number";
 import { Date } from "./input/Date";
-import { Radio } from "./input/Radio";
 import Submit from "./input/Submit";
 import TextArea from "./input/TextArea";
 import Text from "./input/Text";

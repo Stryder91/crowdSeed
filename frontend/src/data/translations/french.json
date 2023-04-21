@@ -1,3 +1,9 @@
 {
-  "title": "Crowd Funding"
+  "title": "Immodagascar",
+  "catg": {
+    "housing": "Logement",
+    "create": "Vendre",
+    "rent": "Louer", 
+    "profil": "Mon profil"
+  }
 }

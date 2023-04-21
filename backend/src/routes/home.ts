@@ -4,7 +4,6 @@ import express from 'express';
 import { 
     getHomes, 
     getHome, 
-    getHomeByCategory,
     getHomeBySearch
 } from '../controllers/home/read';
 
@@ -22,11 +21,11 @@ import { createHome } from '../controllers/home/create';
 const router = express.Router();
 
 /*CREATE*/
-router.post('/create', createValidator, createHome);
+router.post('/', createValidator, createHome);
 
 /*READ*/
-router.get('/byid', getHome);
-router.get('/category', getHomeByCategory);
+router.get('/:id', getHome);
+// router.get('/category', getHomeByCategory);
 router.get('/search', getHomeBySearch);
 router.get('/', getHomes);
 

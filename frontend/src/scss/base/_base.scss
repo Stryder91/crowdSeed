@@ -14,7 +14,7 @@
   --blue:#2050F1;
   --yellow:#FFDA2D;
   --gray:#A7A7A7;
-  --primary: #01E401;
+  --primary: rgb(106 100 241 / var(--tw-bg-opacity));
   --secondary: #bb00ff;
   --white: #fefefe;
   --black: #121212;
@@ -71,14 +71,6 @@ input:focus {
   background-color: var(--secondary);
 }
 
-button{
-  background-color: var(--secondary);
-  color: white;
-  margin: 5px;
-  padding: 4px 16px;
-  border-radius:var(--radius-input) ;
-}
-
 h1, h2, h3, h4, h5, h6 {
   // font-family: 'csgo';
   font-weight: bold;
@@ -87,3 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: 36px; }
 h2 { font-size: 32px; }
 h3 { font-size: 26px; }
+
+.bg-primary {
+  background-color: var(--primary);
+}
